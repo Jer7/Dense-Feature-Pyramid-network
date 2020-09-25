@@ -79,7 +79,8 @@ To evaluate the results, please download 'DFPnet_epoch_495.pth' from [Google dri
 ./run_evaluate.sh
 ``` 
 The parsing result of our DFPnet at epoch 490 is 68.39 mIoU.
-![68.39](DFPnet_results_epoch490.png)
+<p align="center"><img width="110%" src="DFPnet_results_epoch490.png" /></p>
+
 
 **Note** that we keep the model at epoch 495 because of its superiority in mIoU over epoch 490. In our paper, we compare every model at epoch 490 for fairness. To see the accuracy evolution of DFPnet in details, download 'Tensorboard_DFPnet_acc_evolution.rar' with [Google drive](https://drive.google.com/drive/folders/1dQt98cTkpP6omZ7zKEokNP5Xql5zunf9?usp=sharing) and use TensorboardX to read files. 
 
