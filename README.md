@@ -1,8 +1,17 @@
 # DFPnet
 
-This respository is the PyTorch implementation of [DFPnet] https://doi.org/10.1007/s00371-020-01887-5
+This respository is the PyTorch implementation of [DFPnet] https://doi.org/10.1007/s00371-020-01887-5. We studied a novel task called Cartoon Parsing, which is the fine-grained segmentation of cartoon instances. In this paper, we created a new dataset composed of 965 precisely annotated cartoon dog images with seven semantic part labels. We also created a DCNN called DFPnet that outperforms state-of-the-art models of similar tasks trained on our dataset.
+
 
 The code was based on a PyTorch implementation of [CE2P](https://arxiv.org/abs/1809.05996) and upon [https://github.com/speedinghzl/pytorch-segmentation-toolbox](https://github.com/speedinghzl/pytorch-segmentation-toolbox), and the data processing is based upon [https://github.com/Microsoft/human-pose-estimation.pytorch](https://github.com/Microsoft/human-pose-estimation.pytorch)
+
+### Parsing examples
+
+Here are some parsing results of the baseline model (enhanced ResNet101) vs our DFPnet.
+![pred_examples](Baseline_vs_DFPnet.png)
+
+### DFPnet architecture
+![main_graph](main_graph.png)
 
 ### Requirements
 
@@ -33,7 +42,7 @@ To change this (_e.g._ if you are using a Kepler GPU), please edit the `CUDA_GEN
 ### Dataset and pretrained model
 **Note** that the left and right label should be swapped when the label file is flipped. 
 
-Plesae download [Dog](https://drive.google.com/drive/folders/1dQt98cTkpP6omZ7zKEokNP5Xql5zunf9?usp=sharing) dataset, and put into dataset/Cartoon_sketches directory
+Please download [Dog](https://drive.google.com/drive/folders/1dQt98cTkpP6omZ7zKEokNP5Xql5zunf9?usp=sharing) dataset, and put into dataset/Cartoon_sketches directory
 or
 create symbolic links:
 ln -s YOUR_CARTOON_DATASET_DIR dataset/Cartoon_sketches
@@ -80,7 +89,6 @@ If this code is helpful for your research, please cite the following paper:
 	  title = {{Dense feature pyramid network for cartoon dog parsing}}, 
 	  issn = {0178-2789}, 
 	  doi = {10.1007/s00371-020-01887-5}, 
-	  abstract = {{While traditional cartoon character drawings are simple for humans to create, it remains a highly challenging task for machines to interpret. Parsing is a way to alleviate the issue with fine-grained semantic segmentation of images. Although well studied on naturalistic images, research toward cartoon parsing is very sparse. Due to the lack of available dataset and the diversity of artwork styles, the difficulty of the cartoon character parsing task is greater than the well-known human parsing task. In this paper, we study one type of cartoon instance: cartoon dogs. We introduce a novel dataset toward cartoon dog parsing and create a new deep convolutional neural network (DCNN) to tackle the problem. Our dataset contains 965 precisely annotated cartoon dog images with seven semantic part labels. Our new model, called dense feature pyramid network (DFPnet), makes use of recent popular techniques on semantic segmentation to efficiently handle cartoon dog parsing. We achieve a mIoU of 68.39\%, a Mean Accuracy of 79.4\% and a Pixel Accuracy of 93.5\% on our cartoon dog validation set. Our method outperforms state-of-the-art models of similar tasks trained on our dataset: CE2P for single human parsing and Mask R-CNN for instance segmentation. We hope this work can be used as a starting point for future research toward digital artwork understanding with DCNN. Our DFPnet and dataset will be publicly available.}}, 
 	  pages = {1--13}, 
 	  journal = {The Visual Computer}, 
 	  year = {2020}
