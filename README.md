@@ -8,10 +8,10 @@ The code was based on a PyTorch implementation of [CE2P](https://arxiv.org/abs/1
 ### Parsing examples
 
 Here are some parsing results of the baseline model (enhanced ResNet101) vs our DFPnet.
-![pred_examples](Baseline_vs_DFPnet.png)
+![pred_examples](Baseline_vs_DFPnet.PNG)
 
 ### DFPnet architecture
-![main_graph](main_graph.png)
+![main_graph](main_graph.PNG)
 
 ### Requirements
 
